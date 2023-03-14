@@ -29,7 +29,7 @@ const ToDoList = () => {
     }, [])
 
     useEffect(() => {
-        document.getElementById("todo-input").value = "";
+
     }, [arrTemp])
 
     const handleDeleteAll = async () => {

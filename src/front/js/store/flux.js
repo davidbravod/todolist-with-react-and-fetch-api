@@ -45,7 +45,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       ...exampleActions(getStore, getActions, setStore), //this will brings here the function exampleFunction, and it will be able to use store's states and actions
       ...usuarioActions(getStore, getActions, setStore),
       useFetch: async (endpoint, body = null, method = "GET") => {
-        let url = "https://assets.breatheco.de" + endpoint;
+        let url = process.env.BACKEND_URL + endpoint;
         let response = await fetch(url, {
           method: method,
           headers: { "Content-Type": "application/json" },
